@@ -1,0 +1,54 @@
+# ---- Go ----
+# Скомпилированные бинарники
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Кэш и временные файлы Go
+*.log
+*.lock
+*.swp
+*.swo
+*.tmp
+*.temp
+*.bak
+*.old
+
+# go build outputs
+/bin/
+/build/
+/dist/
+
+# Go modules
+vendor/
+*.sum
+
+# ---- Docker ----
+# Игнорируем локальные env
+.env
+.env.local
+.env.docker
+
+# Docker файловая система
+.docker/
+docker-compose.override.yml
+
+# ---- IDE / Editor ----
+# GoLand / JetBrains IDEs
+.idea/
+*.iml
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# macOS системные файлы
+.DS_Store
+
+# ---- Swagger ----
+# Автогенерируемые docs
+docs/docs.go
