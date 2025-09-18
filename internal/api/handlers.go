@@ -46,7 +46,7 @@ func parseYYYYMM(s string) (time.Time, error) {
 func (h *Handlers) Create(w http.ResponseWriter, r *http.Request) {
 	var req model.SubscriptionCreate
 	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
-		h.logger.Warn("invalid json", "err", err)
+		h.logger.Error("invalid json", "err", err)
 		writeJSON(w, http.StatusBadRequest, map[string]string{"error": "invalid json"})
 		return
 	}
